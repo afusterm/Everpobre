@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F1605" minimumToolsVersion="Xcode 7.0">
-    <entity name="NamedEntity" representedClassName="NamedEntity" syncable="YES">
+    <entity name="NamedEntity" representedClassName="AFMNamedEntity" syncable="YES">
         <attribute name="creationDate" attributeType="Date" indexed="YES" syncable="YES"/>
         <attribute name="modificationDate" attributeType="Date" indexed="YES" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="Note" representedClassName="Note" parentEntity="NamedEntity" syncable="YES">
+    <entity name="Note" representedClassName="AFMNote" parentEntity="NamedEntity" syncable="YES">
+        <attribute name="photo" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="notebook" maxCount="1" deletionRule="Nullify" destinationEntity="Notebook" inverseName="notes" inverseEntity="Notebook" syncable="YES"/>
     </entity>
-    <entity name="Notebook" representedClassName="Notebook" parentEntity="NamedEntity" syncable="YES">
+    <entity name="Notebook" representedClassName="AFMNotebook" parentEntity="NamedEntity" syncable="YES">
         <relationship name="notes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Note" inverseName="notebook" inverseEntity="Note" syncable="YES"/>
     </entity>
     <elements>
         <element name="Notebook" positionX="115" positionY="-36" width="128" height="58"/>
-        <element name="Note" positionX="-200" positionY="-36" width="128" height="73"/>
+        <element name="Note" positionX="-200" positionY="-36" width="128" height="88"/>
         <element name="NamedEntity" positionX="-65" positionY="-207" width="128" height="88"/>
     </elements>
 </model>
