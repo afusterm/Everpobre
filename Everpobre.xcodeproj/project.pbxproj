@@ -1,0 +1,319 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A99040D61C6F8C310055852B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A99040D51C6F8C310055852B /* main.m */; };
+		A99040D91C6F8C310055852B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A99040D81C6F8C310055852B /* AppDelegate.m */; };
+		A99040DB1C6F8C310055852B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A99040DA1C6F8C310055852B /* Assets.xcassets */; };
+		A99040DE1C6F8C310055852B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A99040DC1C6F8C310055852B /* LaunchScreen.storyboard */; };
+		A99040E81C6F8D3B0055852B /* AGTSimpleCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = A99040E71C6F8D3B0055852B /* AGTSimpleCoreDataStack.m */; };
+		A99040EB1C6F949A0055852B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A99040E91C6F949A0055852B /* Model.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A99040D11C6F8C310055852B /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A99040D51C6F8C310055852B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A99040D71C6F8C310055852B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A99040D81C6F8C310055852B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A99040DA1C6F8C310055852B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A99040DD1C6F8C310055852B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A99040DF1C6F8C310055852B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A99040E61C6F8D3B0055852B /* AGTSimpleCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTSimpleCoreDataStack.h; sourceTree = "<group>"; };
+		A99040E71C6F8D3B0055852B /* AGTSimpleCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTSimpleCoreDataStack.m; sourceTree = "<group>"; };
+		A99040EA1C6F949A0055852B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A99040CE1C6F8C310055852B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A99040C81C6F8C310055852B = {
+			isa = PBXGroup;
+			children = (
+				A99040D31C6F8C310055852B /* Everpobre */,
+				A99040D21C6F8C310055852B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A99040D21C6F8C310055852B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A99040D11C6F8C310055852B /* Everpobre.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A99040D31C6F8C310055852B /* Everpobre */ = {
+			isa = PBXGroup;
+			children = (
+				A99040E51C6F8C3C0055852B /* Modelos */,
+				A99040D71C6F8C310055852B /* AppDelegate.h */,
+				A99040D81C6F8C310055852B /* AppDelegate.m */,
+				A99040DA1C6F8C310055852B /* Assets.xcassets */,
+				A99040DC1C6F8C310055852B /* LaunchScreen.storyboard */,
+				A99040DF1C6F8C310055852B /* Info.plist */,
+				A99040D41C6F8C310055852B /* Supporting Files */,
+			);
+			path = Everpobre;
+			sourceTree = "<group>";
+		};
+		A99040D41C6F8C310055852B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A99040D51C6F8C310055852B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A99040E51C6F8C3C0055852B /* Modelos */ = {
+			isa = PBXGroup;
+			children = (
+				A99040E61C6F8D3B0055852B /* AGTSimpleCoreDataStack.h */,
+				A99040E71C6F8D3B0055852B /* AGTSimpleCoreDataStack.m */,
+				A99040E91C6F949A0055852B /* Model.xcdatamodeld */,
+			);
+			name = Modelos;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A99040D01C6F8C310055852B /* Everpobre */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A99040E21C6F8C310055852B /* Build configuration list for PBXNativeTarget "Everpobre" */;
+			buildPhases = (
+				A99040CD1C6F8C310055852B /* Sources */,
+				A99040CE1C6F8C310055852B /* Frameworks */,
+				A99040CF1C6F8C310055852B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Everpobre;
+			productName = Everpobre;
+			productReference = A99040D11C6F8C310055852B /* Everpobre.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A99040C91C6F8C310055852B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Alejandro;
+				TargetAttributes = {
+					A99040D01C6F8C310055852B = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = D5QHSG2783;
+					};
+				};
+			};
+			buildConfigurationList = A99040CC1C6F8C310055852B /* Build configuration list for PBXProject "Everpobre" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A99040C81C6F8C310055852B;
+			productRefGroup = A99040D21C6F8C310055852B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A99040D01C6F8C310055852B /* Everpobre */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A99040CF1C6F8C310055852B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A99040DB1C6F8C310055852B /* Assets.xcassets in Resources */,
+				A99040DE1C6F8C310055852B /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A99040CD1C6F8C310055852B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A99040D91C6F8C310055852B /* AppDelegate.m in Sources */,
+				A99040D61C6F8C310055852B /* main.m in Sources */,
+				A99040E81C6F8D3B0055852B /* AGTSimpleCoreDataStack.m in Sources */,
+				A99040EB1C6F949A0055852B /* Model.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A99040DC1C6F8C310055852B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A99040DD1C6F8C310055852B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A99040E01C6F8C310055852B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A99040E11C6F8C310055852B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A99040E31C6F8C310055852B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Everpobre/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Alejandro.Everpobre;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A99040E41C6F8C310055852B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Everpobre/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Alejandro.Everpobre;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A99040CC1C6F8C310055852B /* Build configuration list for PBXProject "Everpobre" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A99040E01C6F8C310055852B /* Debug */,
+				A99040E11C6F8C310055852B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A99040E21C6F8C310055852B /* Build configuration list for PBXNativeTarget "Everpobre" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A99040E31C6F8C310055852B /* Debug */,
+				A99040E41C6F8C310055852B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A99040E91C6F949A0055852B /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A99040EA1C6F949A0055852B /* Model.xcdatamodel */,
+			);
+			currentVersion = A99040EA1C6F949A0055852B /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A99040C91C6F8C310055852B /* Project object */;
+}
