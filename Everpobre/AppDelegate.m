@@ -52,15 +52,6 @@
 
 #pragma mark - Utils
 -(void) trastearConDatos {
-    // crear una nota
-    NSManagedObject *note = [NSEntityDescription insertNewObjectForEntityForName:@"Note"
-                                                           inManagedObjectContext:self.model.context];
-    
-    // asignamos valores a las propiedades mediante KVC
-    [note setValue:@"WWDC" forKey:@"name"];
-    [note setValue:[NSDate date] forKey:@"creationDate"];
-    
-    NSLog(@"%@", note);
 }
 
 @end
