@@ -1,0 +1,16 @@
+//
+//  Everpobre-Prefix.pch
+//  Everpobre
+//
+//  Created by Alejandro on 15/2/16.
+//  Copyright © 2016 Alejandro. All rights reserved.
+//
+
+#import  <availability.h>
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "Settings.h"
+
+#endif
