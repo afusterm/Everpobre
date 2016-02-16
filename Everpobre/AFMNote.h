@@ -1,5 +1,9 @@
 #import "_AFMNote.h"
 
 @interface AFMNote : _AFMNote {}
-// Custom logic goes here.
+
++(instancetype) noteWithName:(NSString *) name
+                    notebook:(AFMNotebook *) notebook
+                     context:(NSManagedObjectContext *) context;
+
 @end

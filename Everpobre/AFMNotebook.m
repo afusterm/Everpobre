@@ -2,12 +2,25 @@
 
 @interface AFMNotebook ()
 
-// Private interface goes here.
++(NSArray *) observableKeyNames;
 
 @end
 
 @implementation AFMNotebook
 
-// Custom logic goes here.
++(NSArray *) observableKeyNames {
+    return @[@"creationDate", @"name", @"notes"];
+}
+
++(instancetype) notebookWithName:(NSString *) name
+                         context:(NSManagedObjectContext *) context {
+    AFMNotebook *nb = [NSEntityDescription insertNewObjectForEntityForName:[AFMNotebook entityName]
+                                                    inManagedObjectContext:context];
+    nb.creationDate = [NSDate date];
+    nb.modificationDate = [NSDate date];
+    nb.name = name;
+    
+    return nb;
+}
 
 @end

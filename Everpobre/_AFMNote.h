@@ -5,15 +5,16 @@
 #import "AFMNamedEntity.h"
 
 extern const struct AFMNoteAttributes {
-	__unsafe_unretained NSString *photo;
 	__unsafe_unretained NSString *text;
 } AFMNoteAttributes;
 
 extern const struct AFMNoteRelationships {
 	__unsafe_unretained NSString *notebook;
+	__unsafe_unretained NSString *photo;
 } AFMNoteRelationships;
 
 @class AFMNotebook;
+@class AFMPhoto;
 
 @interface AFMNoteID : AFMNamedEntityID {}
 @end
@@ -24,10 +25,6 @@ extern const struct AFMNoteRelationships {
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
 @property (nonatomic, readonly, strong) AFMNoteID* objectID;
 
-@property (nonatomic, strong) NSData* photo;
-
-//- (BOOL)validatePhoto:(id*)value_ error:(NSError**)error_;
-
 @property (nonatomic, strong) NSString* text;
 
 //- (BOOL)validateText:(id*)value_ error:(NSError**)error_;
@@ -36,17 +33,21 @@ extern const struct AFMNoteRelationships {
 
 //- (BOOL)validateNotebook:(id*)value_ error:(NSError**)error_;
 
+@property (nonatomic, strong) AFMPhoto *photo;
+
+//- (BOOL)validatePhoto:(id*)value_ error:(NSError**)error_;
+
 @end
 
 @interface _AFMNote (CoreDataGeneratedPrimitiveAccessors)
-
-- (NSData*)primitivePhoto;
-- (void)setPrimitivePhoto:(NSData*)value;
 
 - (NSString*)primitiveText;
 - (void)setPrimitiveText:(NSString*)value;
 
 - (AFMNotebook*)primitiveNotebook;
 - (void)setPrimitiveNotebook:(AFMNotebook*)value;
+
+- (AFMPhoto*)primitivePhoto;
+- (void)setPrimitivePhoto:(AFMPhoto*)value;
 
 @end

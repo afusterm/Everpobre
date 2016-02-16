@@ -4,12 +4,12 @@
 #import "_AFMNote.h"
 
 const struct AFMNoteAttributes AFMNoteAttributes = {
-	.photo = @"photo",
 	.text = @"text",
 };
 
 const struct AFMNoteRelationships AFMNoteRelationships = {
 	.notebook = @"notebook",
+	.photo = @"photo",
 };
 
 @implementation AFMNoteID
@@ -41,11 +41,11 @@ const struct AFMNoteRelationships AFMNoteRelationships = {
 	return keyPaths;
 }
 
-@dynamic photo;
-
 @dynamic text;
 
 @dynamic notebook;
+
+@dynamic photo;
 
 @end
 
