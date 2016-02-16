@@ -7,15 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A95C32BB1C7068B100B157A7 /* _AFMPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = A95C32B81C7068B100B157A7 /* _AFMPhoto.m */; };
+		A95C32BC1C7068B100B157A7 /* AFMPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = A95C32BA1C7068B100B157A7 /* AFMPhoto.m */; };
 		A99040D61C6F8C310055852B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A99040D51C6F8C310055852B /* main.m */; };
 		A99040D91C6F8C310055852B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A99040D81C6F8C310055852B /* AppDelegate.m */; };
 		A99040DB1C6F8C310055852B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A99040DA1C6F8C310055852B /* Assets.xcassets */; };
 		A99040DE1C6F8C310055852B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A99040DC1C6F8C310055852B /* LaunchScreen.storyboard */; };
 		A99040E81C6F8D3B0055852B /* AGTSimpleCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = A99040E71C6F8D3B0055852B /* AGTSimpleCoreDataStack.m */; };
 		A99040EB1C6F949A0055852B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A99040E91C6F949A0055852B /* Model.xcdatamodeld */; };
+		A990412E1C6FB5DA0055852B /* _AFMNamedEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = A99041231C6FB5DA0055852B /* _AFMNamedEntity.m */; };
+		A990412F1C6FB5DA0055852B /* _AFMNote.m in Sources */ = {isa = PBXBuildFile; fileRef = A99041251C6FB5DA0055852B /* _AFMNote.m */; };
+		A99041301C6FB5DA0055852B /* _AFMNotebook.m in Sources */ = {isa = PBXBuildFile; fileRef = A99041271C6FB5DA0055852B /* _AFMNotebook.m */; };
+		A99041311C6FB5DA0055852B /* AFMNamedEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = A99041291C6FB5DA0055852B /* AFMNamedEntity.m */; };
+		A99041321C6FB5DA0055852B /* AFMNote.m in Sources */ = {isa = PBXBuildFile; fileRef = A990412B1C6FB5DA0055852B /* AFMNote.m */; };
+		A99041331C6FB5DA0055852B /* AFMNotebook.m in Sources */ = {isa = PBXBuildFile; fileRef = A990412D1C6FB5DA0055852B /* AFMNotebook.m */; };
+		A9BABF3C1C73A813007A4766 /* AGTCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BABF3B1C73A813007A4766 /* AGTCoreDataTableViewController.m */; };
+		A9BABF3F1C73A867007A4766 /* AFMNotebooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BABF3E1C73A867007A4766 /* AFMNotebooksViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A95C32B71C7068B100B157A7 /* _AFMPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AFMPhoto.h; sourceTree = "<group>"; };
+		A95C32B81C7068B100B157A7 /* _AFMPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AFMPhoto.m; sourceTree = "<group>"; };
+		A95C32B91C7068B100B157A7 /* AFMPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMPhoto.h; sourceTree = "<group>"; };
+		A95C32BA1C7068B100B157A7 /* AFMPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMPhoto.m; sourceTree = "<group>"; };
 		A99040D11C6F8C310055852B /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99040D51C6F8C310055852B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A99040D71C6F8C310055852B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +40,24 @@
 		A99040E61C6F8D3B0055852B /* AGTSimpleCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTSimpleCoreDataStack.h; sourceTree = "<group>"; };
 		A99040E71C6F8D3B0055852B /* AGTSimpleCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTSimpleCoreDataStack.m; sourceTree = "<group>"; };
 		A99040EA1C6F949A0055852B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		A99041221C6FB5DA0055852B /* _AFMNamedEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AFMNamedEntity.h; sourceTree = "<group>"; };
+		A99041231C6FB5DA0055852B /* _AFMNamedEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AFMNamedEntity.m; sourceTree = "<group>"; };
+		A99041241C6FB5DA0055852B /* _AFMNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AFMNote.h; sourceTree = "<group>"; };
+		A99041251C6FB5DA0055852B /* _AFMNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AFMNote.m; sourceTree = "<group>"; };
+		A99041261C6FB5DA0055852B /* _AFMNotebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AFMNotebook.h; sourceTree = "<group>"; };
+		A99041271C6FB5DA0055852B /* _AFMNotebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AFMNotebook.m; sourceTree = "<group>"; };
+		A99041281C6FB5DA0055852B /* AFMNamedEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMNamedEntity.h; sourceTree = "<group>"; };
+		A99041291C6FB5DA0055852B /* AFMNamedEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMNamedEntity.m; sourceTree = "<group>"; };
+		A990412A1C6FB5DA0055852B /* AFMNote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMNote.h; sourceTree = "<group>"; };
+		A990412B1C6FB5DA0055852B /* AFMNote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMNote.m; sourceTree = "<group>"; };
+		A990412C1C6FB5DA0055852B /* AFMNotebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMNotebook.h; sourceTree = "<group>"; };
+		A990412D1C6FB5DA0055852B /* AFMNotebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMNotebook.m; sourceTree = "<group>"; };
+		A9B3BC741C727F6900A0E7DA /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		A9B3BC751C72800A00A0E7DA /* Everpobre-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Everpobre-Prefix.pch"; sourceTree = "<group>"; };
+		A9BABF3A1C73A813007A4766 /* AGTCoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTCoreDataTableViewController.h; sourceTree = "<group>"; };
+		A9BABF3B1C73A813007A4766 /* AGTCoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTCoreDataTableViewController.m; sourceTree = "<group>"; };
+		A9BABF3D1C73A867007A4766 /* AFMNotebooksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMNotebooksViewController.h; sourceTree = "<group>"; };
+		A9BABF3E1C73A867007A4766 /* AFMNotebooksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMNotebooksViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +90,7 @@
 		A99040D31C6F8C310055852B /* Everpobre */ = {
 			isa = PBXGroup;
 			children = (
+				A9BABF391C73A7FB007A4766 /* Controllers */,
 				A99040E51C6F8C3C0055852B /* Modelos */,
 				A99040D71C6F8C310055852B /* AppDelegate.h */,
 				A99040D81C6F8C310055852B /* AppDelegate.m */,
@@ -72,7 +105,9 @@
 		A99040D41C6F8C310055852B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A9B3BC741C727F6900A0E7DA /* Settings.h */,
 				A99040D51C6F8C310055852B /* main.m */,
+				A9B3BC751C72800A00A0E7DA /* Everpobre-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -80,11 +115,38 @@
 		A99040E51C6F8C3C0055852B /* Modelos */ = {
 			isa = PBXGroup;
 			children = (
+				A95C32B71C7068B100B157A7 /* _AFMPhoto.h */,
+				A95C32B81C7068B100B157A7 /* _AFMPhoto.m */,
+				A95C32B91C7068B100B157A7 /* AFMPhoto.h */,
+				A95C32BA1C7068B100B157A7 /* AFMPhoto.m */,
+				A99041221C6FB5DA0055852B /* _AFMNamedEntity.h */,
+				A99041231C6FB5DA0055852B /* _AFMNamedEntity.m */,
+				A99041241C6FB5DA0055852B /* _AFMNote.h */,
+				A99041251C6FB5DA0055852B /* _AFMNote.m */,
+				A99041261C6FB5DA0055852B /* _AFMNotebook.h */,
+				A99041271C6FB5DA0055852B /* _AFMNotebook.m */,
+				A99041281C6FB5DA0055852B /* AFMNamedEntity.h */,
+				A99041291C6FB5DA0055852B /* AFMNamedEntity.m */,
+				A990412A1C6FB5DA0055852B /* AFMNote.h */,
+				A990412B1C6FB5DA0055852B /* AFMNote.m */,
+				A990412C1C6FB5DA0055852B /* AFMNotebook.h */,
+				A990412D1C6FB5DA0055852B /* AFMNotebook.m */,
 				A99040E61C6F8D3B0055852B /* AGTSimpleCoreDataStack.h */,
 				A99040E71C6F8D3B0055852B /* AGTSimpleCoreDataStack.m */,
 				A99040E91C6F949A0055852B /* Model.xcdatamodeld */,
 			);
 			name = Modelos;
+			sourceTree = "<group>";
+		};
+		A9BABF391C73A7FB007A4766 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A9BABF3A1C73A813007A4766 /* AGTCoreDataTableViewController.h */,
+				A9BABF3B1C73A813007A4766 /* AGTCoreDataTableViewController.m */,
+				A9BABF3D1C73A867007A4766 /* AFMNotebooksViewController.h */,
+				A9BABF3E1C73A867007A4766 /* AFMNotebooksViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,10 +219,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A95C32BB1C7068B100B157A7 /* _AFMPhoto.m in Sources */,
 				A99040D91C6F8C310055852B /* AppDelegate.m in Sources */,
+				A99041311C6FB5DA0055852B /* AFMNamedEntity.m in Sources */,
+				A95C32BC1C7068B100B157A7 /* AFMPhoto.m in Sources */,
+				A9BABF3F1C73A867007A4766 /* AFMNotebooksViewController.m in Sources */,
 				A99040D61C6F8C310055852B /* main.m in Sources */,
+				A990412F1C6FB5DA0055852B /* _AFMNote.m in Sources */,
 				A99040E81C6F8D3B0055852B /* AGTSimpleCoreDataStack.m in Sources */,
 				A99040EB1C6F949A0055852B /* Model.xcdatamodeld in Sources */,
+				A9BABF3C1C73A813007A4766 /* AGTCoreDataTableViewController.m in Sources */,
+				A99041301C6FB5DA0055852B /* _AFMNotebook.m in Sources */,
+				A99041331C6FB5DA0055852B /* AFMNotebook.m in Sources */,
+				A99041321C6FB5DA0055852B /* AFMNote.m in Sources */,
+				A990412E1C6FB5DA0055852B /* _AFMNamedEntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +334,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Everpobre/Everpobre-Prefix.pch";
 				INFOPLIST_FILE = Everpobre/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Alejandro.Everpobre;
@@ -273,6 +346,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Everpobre/Everpobre-Prefix.pch";
 				INFOPLIST_FILE = Everpobre/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Alejandro.Everpobre;
@@ -299,6 +373,7 @@
 				A99040E41C6F8C310055852B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
