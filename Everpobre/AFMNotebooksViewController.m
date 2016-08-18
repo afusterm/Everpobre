@@ -8,6 +8,8 @@
 
 #import "AFMNotebooksViewController.h"
 #import "AFMNotebook.h"
+#import "AFMNotebookCellView.h"
+#import "AFMNotesTableViewController.h"
 
 @interface AFMNotebooksViewController ()
 
@@ -32,6 +34,32 @@
     
     // ponemos el botón de edición
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
+    // alta en notificación en sensor de proximidad
+    UIDevice *dev = [UIDevice currentDevice];
+    if ([self hasProximitySensor]) {
+        // detectar cambios en el sensor de proximidad
+        [dev setProximityMonitoringEnabled:YES];
+        
+        NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+        [center addObserver:self
+                   selector:@selector(proximityStateDidChange:)
+                       name:UIDeviceProximityStateDidChangeNotification
+                     object:nil];
+    }
+    
+    // registramos el nib
+    UINib *cellNib = [UINib nibWithNibName:@"AFMNotebookCellView"
+                                    bundle:nil];
+    [self.tableView registerNib:cellNib
+         forCellReuseIdentifier:[AFMNotebookCellView cellId]];
+}
+
+-(void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center removeObserver:self];
 }
 
 #pragma mark - Actions
@@ -62,21 +90,47 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
     AFMNotebook *nb = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     // crear una celda
-    static NSString *cellId = @"cellId";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
-                                      reuseIdentifier:cellId];
-    }
+    AFMNotebookCellView *cell = [tableView dequeueReusableCellWithIdentifier:[AFMNotebookCellView cellId]];
     
     // sincronizar libreta -> celda
-    cell.textLabel.text = nb.name;
-    NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
-    fmt.dateStyle = NSDateIntervalFormatterMediumStyle;
-    cell.detailTextLabel.text = [fmt stringFromDate:nb.modificationDate];
+    cell.nameView.text = nb.name;
+    cell.numberOfNotesView.text = [NSString stringWithFormat:@"%d", nb.notes.count];
     
     // devolver la celda
     return cell;
+}
+
+#pragma mark - TableView Delegate
+-(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [AFMNotebookCellView cellHeight];
+}
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    AFMNotebook *nb = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    AFMNotesTableViewController *notesVC = [[AFMNotesTableViewController alloc] initWithNotebook:nb];
+    
+    [self.navigationController pushViewController:notesVC
+                                         animated:YES];
+}
+
+#pragma mark - Proximity Sensor
+
+-(BOOL) hasProximitySensor {
+    UIDevice *dev = [UIDevice currentDevice];
+    BOOL oldValue = [dev isProximityMonitoringEnabled];
+    [dev setProximityMonitoringEnabled:!oldValue];
+    BOOL newValue = [dev isProximityMonitoringEnabled];
+    
+    [dev setProximityMonitoringEnabled:oldValue];
+    
+    return (oldValue != newValue);
+}
+
+// UIDeviceProximityStateDidChangeNotification
+-(void) proximityStateDidChange:(NSNotification *) notification {
+    // TODO: preguntar al usuario con un UIAlertView
+    // NOTE: esto solo se puede probar con un iPhone físico
+    [self.fetchedResultsController.managedObjectContext.undoManager undo];
 }
 
 @end

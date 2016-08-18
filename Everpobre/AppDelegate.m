@@ -8,9 +8,11 @@
 
 #import "AppDelegate.h"
 #import "AGTSimpleCoreDataStack.h"
+
 #import "AFMNotebook.h"
 #import "AFMNote.h"
 #import "AFMNotebooksViewController.h"
+#import "UIViewController+Navigation.h"
 
 @interface AppDelegate ()
 
@@ -22,6 +24,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // crear una instancia del stack Core Data
     self.model = [AGTSimpleCoreDataStack coreDataStackWithModelName:@"Model"];
+    
+    // ¿Añadimos datos chorras?
+    if (ADD_DUMMY_DATA) {
+        [self addDummyData];
+        [self predicateTest];
+    }
     
     [self autoSave];
     
@@ -41,8 +49,7 @@
                                         initWithFetchedResultsController:results
                                         style:UITableViewStylePlain];
     
-    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:nbVC];
-    self.window.rootViewController = navVC;
+    self.window.rootViewController = [nbVC wrappedInNavigation];
     
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
@@ -75,6 +82,46 @@
 }
 
 #pragma mark - Utils
+-(void) addDummyData{
+    
+    [self.model zapAllData];
+    
+    AFMNotebook *novias = [AFMNotebook notebookWithName:@"Ex-novias para el recuerdo"
+                                                context:self.model.context];
+    
+    [AFMNote noteWithName:@"Camila Dávalos"
+                 notebook:novias
+                  context:self.model.context];
+    
+    [AFMNote noteWithName:@"Mariana Dávalos"
+                 notebook:novias
+                  context:self.model.context];
+    
+    [AFMNote noteWithName:@"Pampita"
+                 notebook:novias
+                  context:self.model.context];
+    
+    AFMNotebook *lugares = [AFMNotebook notebookWithName:@"Lugares donde me han pasado cosas raras"
+                                                 context:self.model.context];
+    
+    [AFMNote noteWithName:@"Puerta del Sol"
+                 notebook:lugares
+                  context:self.model.context];
+    [AFMNote noteWithName:@"Tatooine"
+                 notebook:lugares
+                  context:self.model.context];
+    [AFMNote noteWithName:@"Dantooine"
+                 notebook:lugares
+                  context:self.model.context];
+    [AFMNote noteWithName:@"Solaria"
+                 notebook:lugares
+                  context:self.model.context];
+    
+    // Guardamos
+    [self save];
+    
+}
+
 -(void) trastearConDatos {
     AFMNotebook *novias = [AFMNotebook notebookWithName:@"Ex-novias para el recuerdo"
                                                 context:self.model.context];
@@ -137,6 +184,45 @@
     }
     
     return results;
+}
+
+#pragma mark - Predicate Playground
+
+-(void) predicateTest {
+    NSPredicate *novias = [NSPredicate predicateWithFormat:@"notebook.name ==[cd] 'Ex-novias para el recuerdo'"];
+    NSPredicate *davalos = [NSCompoundPredicate andPredicateWithSubpredicates:@[novias, [NSPredicate predicateWithFormat:@"name ENDSWITH[cd] 'davalos'"]]];
+    NSPredicate *pampita = [NSCompoundPredicate andPredicateWithSubpredicates:@[novias, [NSPredicate predicateWithFormat:@"name CONTAINS[cd] 'pampita'"]]];
+    
+    // fetch request
+    NSFetchRequest *req = [NSFetchRequest fetchRequestWithEntityName:[AFMNote entityName]];
+    NSArray *results = nil;
+    
+    // Ex-novias
+    req.predicate = novias;
+    results = [self.model executeRequest:req
+                               withError:^(NSError *error) {
+                                   NSLog(@"Error buscando %@", req);
+                               }];
+    
+    NSLog(@"Results:\n %@", results);
+    
+    // Davalos
+    req.predicate = davalos;
+    results = [self.model executeRequest:req
+                               withError:^(NSError *error) {
+                                   NSLog(@"Error buscando %@", req);
+                               }];
+    
+    NSLog(@"Results:\n %@", results);
+    
+    // pampita
+    req.predicate = pampita;
+    results = [self.model executeRequest:req
+                               withError:^(NSError *error) {
+                                   NSLog(@"Error buscando %@", req);
+                               }];
+    
+    NSLog(@"Results:\n %@", results);
 }
 
 @end

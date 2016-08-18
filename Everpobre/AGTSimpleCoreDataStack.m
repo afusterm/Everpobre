@@ -37,6 +37,9 @@
         // TODO: preguntar si esto es lo adecuado
         _context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
         _context.persistentStoreCoordinator = self.storeCoordinator;
+        
+        // añadir un undomanager
+        _context.undoManager = [[NSUndoManager alloc] init];
     }
     
     return _context;

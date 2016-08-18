@@ -176,5 +176,49 @@
     }
 }
 
+#pragma mark - UndoManager
+
+-(void) motionEnded:(UIEventSubtype)motion
+          withEvent:(UIEvent *)event {
+    if (motion == UIEventSubtypeMotionShake) {
+        // se ha producido una sacudida
+        
+        // preguntar al usuario si quiere deshacer o rehacer si se puede
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Deshacer/Rehacer"
+                                                                       message:@"¿Desea deshacer los cambios?"
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        
+        // añadir la opción de cancelar
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancelar"
+                                                               style:UIAlertActionStyleCancel
+                                                             handler:nil];
+        [alert addAction:cancelAction];
+        
+        // si se puede deshacer se añade la acción para deshacer al mensaje
+        if ([self.fetchedResultsController.managedObjectContext.undoManager canUndo]) {
+            UIAlertAction *undoAction = [UIAlertAction actionWithTitle:@"Deshacer"
+                                                                 style:UIAlertActionStyleDefault
+                                                               handler:^(UIAlertAction * _Nonnull action) {
+                                                                   [self.fetchedResultsController.managedObjectContext.undoManager undo];
+                                                               }];
+            [alert addAction:undoAction];
+        }
+        
+        // si se puede rehacer se añade la acción para rehacer al mensaje
+        if ([self.fetchedResultsController.managedObjectContext.undoManager canRedo]) {
+            UIAlertAction *redoAction = [UIAlertAction actionWithTitle:@"Rehacer"
+                                                                 style:UIAlertActionStyleDefault
+                                                               handler:^(UIAlertAction * _Nonnull action) {
+                                                                   [self.fetchedResultsController.managedObjectContext.undoManager redo];
+                                                               }];
+            [alert addAction:redoAction];
+        }
+        
+        [self presentViewController:alert
+                           animated:YES
+                         completion:nil];
+    }
+}
+
 @end
 
