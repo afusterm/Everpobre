@@ -10,6 +10,8 @@
 #import "AFMNotebook.h"
 #import "AFMNotebookCellView.h"
 #import "AFMNotesTableViewController.h"
+#import "AFMNote.h"
+#import "AFMNotesViewController.h"
 
 @interface AFMNotebooksViewController ()
 
@@ -106,9 +108,37 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
 }
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    AFMNotebook *nb = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    AFMNotesTableViewController *notesVC = [[AFMNotesTableViewController alloc] initWithNotebook:nb];
+    // Crear el fetch request
+    NSFetchRequest *req = [NSFetchRequest fetchRequestWithEntityName:[AFMNote entityName]];
+    req.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:AFMNamedEntityAttributes.name
+                                                          ascending:YES],
+                            [NSSortDescriptor sortDescriptorWithKey:AFMNamedEntityAttributes.modificationDate
+                                                          ascending:NO],
+                            [NSSortDescriptor sortDescriptorWithKey:AFMNamedEntityAttributes.creationDate
+                                                          ascending:NO]];
     
+    req.predicate = [NSPredicate predicateWithFormat:@"notebook == %@",
+                     [self.fetchedResultsController objectAtIndexPath:indexPath]];
+    
+    // Crear el fetched results controller
+    NSFetchedResultsController *fC = [[NSFetchedResultsController alloc] initWithFetchRequest:req
+                                                                         managedObjectContext:self.fetchedResultsController.managedObjectContext
+                                                                           sectionNameKeyPath:nil
+                                                                                    cacheName:nil];
+    // Layout
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    layout.itemSize = CGSizeMake(140, 150);
+    layout.minimumLineSpacing = 10;
+    layout.minimumInteritemSpacing = 10;
+    layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
+    
+    // Crear el controlador de notas
+    AFMNotesViewController *notesVC = [AFMNotesViewController
+                                       coreDataCollectionViewControllerWithFetchedResultsController:fC
+                                       layout:layout];
+    
+    // hacer push
     [self.navigationController pushViewController:notesVC
                                          animated:YES];
 }

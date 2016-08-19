@@ -27,6 +27,11 @@
 		A9BABF431C73D43E007A4766 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BABF421C73D43E007A4766 /* UIViewController+Navigation.m */; };
 		A9BABF461C73D81E007A4766 /* AFMNotebookCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9BABF451C73D81E007A4766 /* AFMNotebookCellView.xib */; };
 		A9BABF491C73DA62007A4766 /* AFMNotebookCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BABF481C73DA62007A4766 /* AFMNotebookCellView.m */; };
+		A9D4BF9A1D661CD50015335D /* AFMNoteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9D4BF991D661CD50015335D /* AFMNoteCollectionViewCell.xib */; };
+		A9D4BF9D1D661DB70015335D /* AFMNoteCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D4BF9C1D661DB70015335D /* AFMNoteCellView.m */; };
+		A9D4BFA01D664BFA0015335D /* AGTCoreDataCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D4BF9F1D664BFA0015335D /* AGTCoreDataCollectionViewController.m */; };
+		A9D4BFA31D664C7B0015335D /* AFMNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D4BFA21D664C7B0015335D /* AFMNotesViewController.m */; };
+		A9D4BFA61D6657C20015335D /* noImage.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D4BFA51D6657C20015335D /* noImage.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +74,14 @@
 		A9BABF451C73D81E007A4766 /* AFMNotebookCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFMNotebookCellView.xib; sourceTree = "<group>"; };
 		A9BABF471C73DA62007A4766 /* AFMNotebookCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMNotebookCellView.h; sourceTree = "<group>"; };
 		A9BABF481C73DA62007A4766 /* AFMNotebookCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMNotebookCellView.m; sourceTree = "<group>"; };
+		A9D4BF991D661CD50015335D /* AFMNoteCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFMNoteCollectionViewCell.xib; sourceTree = "<group>"; };
+		A9D4BF9B1D661DB70015335D /* AFMNoteCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMNoteCellView.h; sourceTree = "<group>"; };
+		A9D4BF9C1D661DB70015335D /* AFMNoteCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMNoteCellView.m; sourceTree = "<group>"; };
+		A9D4BF9E1D664BFA0015335D /* AGTCoreDataCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTCoreDataCollectionViewController.h; sourceTree = "<group>"; };
+		A9D4BF9F1D664BFA0015335D /* AGTCoreDataCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTCoreDataCollectionViewController.m; sourceTree = "<group>"; };
+		A9D4BFA11D664C7B0015335D /* AFMNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMNotesViewController.h; sourceTree = "<group>"; };
+		A9D4BFA21D664C7B0015335D /* AFMNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMNotesViewController.m; sourceTree = "<group>"; };
+		A9D4BFA51D6657C20015335D /* noImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noImage.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +114,7 @@
 		A99040D31C6F8C310055852B /* Everpobre */ = {
 			isa = PBXGroup;
 			children = (
+				A9D4BFA41D6657B10015335D /* Resources */,
 				A9BABF441C73D7C6007A4766 /* Views */,
 				A9BABF401C73D3AC007A4766 /* Categories */,
 				A9BABF391C73A7FB007A4766 /* Controllers */,
@@ -154,12 +168,16 @@
 		A9BABF391C73A7FB007A4766 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A9D4BF9E1D664BFA0015335D /* AGTCoreDataCollectionViewController.h */,
+				A9D4BF9F1D664BFA0015335D /* AGTCoreDataCollectionViewController.m */,
 				A9BABF3A1C73A813007A4766 /* AGTCoreDataTableViewController.h */,
 				A9BABF3B1C73A813007A4766 /* AGTCoreDataTableViewController.m */,
 				A9BABF3D1C73A867007A4766 /* AFMNotebooksViewController.h */,
 				A9BABF3E1C73A867007A4766 /* AFMNotebooksViewController.m */,
 				A92F38601C8B062B00210558 /* AFMNotesTableViewController.h */,
 				A92F38611C8B062B00210558 /* AFMNotesTableViewController.m */,
+				A9D4BFA11D664C7B0015335D /* AFMNotesViewController.h */,
+				A9D4BFA21D664C7B0015335D /* AFMNotesViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -179,8 +197,19 @@
 				A9BABF451C73D81E007A4766 /* AFMNotebookCellView.xib */,
 				A9BABF471C73DA62007A4766 /* AFMNotebookCellView.h */,
 				A9BABF481C73DA62007A4766 /* AFMNotebookCellView.m */,
+				A9D4BF991D661CD50015335D /* AFMNoteCollectionViewCell.xib */,
+				A9D4BF9B1D661DB70015335D /* AFMNoteCellView.h */,
+				A9D4BF9C1D661DB70015335D /* AFMNoteCellView.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		A9D4BFA41D6657B10015335D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A9D4BFA51D6657C20015335D /* noImage.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +272,9 @@
 			files = (
 				A9BABF461C73D81E007A4766 /* AFMNotebookCellView.xib in Resources */,
 				A99040DB1C6F8C310055852B /* Assets.xcassets in Resources */,
+				A9D4BFA61D6657C20015335D /* noImage.png in Resources */,
 				A99040DE1C6F8C310055852B /* LaunchScreen.storyboard in Resources */,
+				A9D4BF9A1D661CD50015335D /* AFMNoteCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9BABF491C73DA62007A4766 /* AFMNotebookCellView.m in Sources */,
+				A9D4BF9D1D661DB70015335D /* AFMNoteCellView.m in Sources */,
 				A95C32BB1C7068B100B157A7 /* _AFMPhoto.m in Sources */,
 				A99040D91C6F8C310055852B /* AppDelegate.m in Sources */,
 				A99041311C6FB5DA0055852B /* AFMNamedEntity.m in Sources */,
@@ -264,7 +296,9 @@
 				A99040D61C6F8C310055852B /* main.m in Sources */,
 				A9BABF431C73D43E007A4766 /* UIViewController+Navigation.m in Sources */,
 				A990412F1C6FB5DA0055852B /* _AFMNote.m in Sources */,
+				A9D4BFA31D664C7B0015335D /* AFMNotesViewController.m in Sources */,
 				A99040E81C6F8D3B0055852B /* AGTSimpleCoreDataStack.m in Sources */,
+				A9D4BFA01D664BFA0015335D /* AGTCoreDataCollectionViewController.m in Sources */,
 				A99040EB1C6F949A0055852B /* Model.xcdatamodeld in Sources */,
 				A9BABF3C1C73A813007A4766 /* AGTCoreDataTableViewController.m in Sources */,
 				A99041301C6FB5DA0055852B /* _AFMNotebook.m in Sources */,
