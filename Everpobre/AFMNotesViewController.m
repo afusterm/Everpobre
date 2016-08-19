@@ -10,6 +10,7 @@
 #import "AFMNote.h"
 #import "AFMNoteCellView.h"
 #import "AFMPhoto.h"
+#import "AFMNoteViewController.h"
 
 static NSString* const cellId = @"NoteCellId";
 
@@ -54,7 +55,22 @@ static NSString* const cellId = @"NoteCellId";
     
     // Configurar la celda
     [cell observeNote:note];
+    
     return cell;
+}
+
+#pragma mark - Delegate
+
+-(void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    // Obtener el objeto
+    AFMNote *note = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    // Crear el controlador
+    AFMNoteViewController *noteVC = [[AFMNoteViewController alloc] initWithModel:note];
+    
+    // Hacer un push
+    [self.navigationController pushViewController:noteVC
+                                         animated:YES];
 }
 
 @end
