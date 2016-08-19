@@ -8,15 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+#import "AFMDetailViewController.h"
+
 @class AFMNote;
 
-@interface AFMNoteViewController : UIViewController
+@interface AFMNoteViewController : UIViewController<AFMDetailViewController>
 @property (weak, nonatomic) IBOutlet UILabel *modificationDateView;
 @property (weak, nonatomic) IBOutlet UILabel *nameView;
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
-
--(id) initWithModel:(AFMNote *) model;
 
 @end

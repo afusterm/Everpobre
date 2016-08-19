@@ -18,7 +18,7 @@
 
 #pragma mark - Init
 
--(id) initWithModel:(AFMNote *) model {
+-(id) initWithModel:(id) model {
     if (self = [super initWithNibName:nil bundle:nil]) {
         _model = model;
     }

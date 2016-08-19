@@ -30,6 +30,7 @@ static NSString* const cellId = @"NoteCellId";
     self.collectionView.backgroundColor = [UIColor colorWithWhite:0.95
                                                             alpha:1];
     self.title = @"Notas";
+    self.detailViewControllerClassName = NSStringFromClass([AFMNoteViewController class]);
 }
 
 #pragma mark - Xib registration
@@ -57,20 +58,6 @@ static NSString* const cellId = @"NoteCellId";
     [cell observeNote:note];
     
     return cell;
-}
-
-#pragma mark - Delegate
-
--(void) collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    // Obtener el objeto
-    AFMNote *note = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    
-    // Crear el controlador
-    AFMNoteViewController *noteVC = [[AFMNoteViewController alloc] initWithModel:note];
-    
-    // Hacer un push
-    [self.navigationController pushViewController:noteVC
-                                         animated:YES];
 }
 
 @end

@@ -81,6 +81,7 @@
 		A9BABF451C73D81E007A4766 /* AFMNotebookCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFMNotebookCellView.xib; sourceTree = "<group>"; };
 		A9BABF471C73DA62007A4766 /* AFMNotebookCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMNotebookCellView.h; sourceTree = "<group>"; };
 		A9BABF481C73DA62007A4766 /* AFMNotebookCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMNotebookCellView.m; sourceTree = "<group>"; };
+		A9CE5FEF1D675F2300E29327 /* AFMDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFMDetailViewController.h; sourceTree = "<group>"; };
 		A9D4BF991D661CD50015335D /* AFMNoteCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFMNoteCollectionViewCell.xib; sourceTree = "<group>"; };
 		A9D4BF9B1D661DB70015335D /* AFMNoteCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMNoteCellView.h; sourceTree = "<group>"; };
 		A9D4BF9C1D661DB70015335D /* AFMNoteCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMNoteCellView.m; sourceTree = "<group>"; };
@@ -123,6 +124,7 @@
 		A99040D31C6F8C310055852B /* Everpobre */ = {
 			isa = PBXGroup;
 			children = (
+				A9CE5FEE1D675E0500E29327 /* Protocols */,
 				A9D4BFA41D6657B10015335D /* Resources */,
 				A9BABF441C73D7C6007A4766 /* Views */,
 				A9BABF401C73D3AC007A4766 /* Categories */,
@@ -214,6 +216,14 @@
 				A9D4BF9C1D661DB70015335D /* AFMNoteCellView.m */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		A9CE5FEE1D675E0500E29327 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A9CE5FEF1D675F2300E29327 /* AFMDetailViewController.h */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 		A9D4BFA41D6657B10015335D /* Resources */ = {
