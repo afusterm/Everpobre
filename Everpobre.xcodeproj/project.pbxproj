@@ -25,6 +25,8 @@
 		A9957E1E1D66FA790002C834 /* AFMNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9957E1C1D66FA790002C834 /* AFMNoteViewController.m */; };
 		A9957E1F1D66FA790002C834 /* AFMNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9957E1D1D66FA790002C834 /* AFMNoteViewController.xib */; };
 		A9957E211D6700EA0002C834 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9957E201D6700EA0002C834 /* MapKit.framework */; };
+		A9AEB5CC1D68B10D00C71758 /* AGTNoteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AEB5CA1D68B10D00C71758 /* AGTNoteTableViewController.m */; };
+		A9AEB5CD1D68B10D00C71758 /* AGTNoteTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9AEB5CB1D68B10D00C71758 /* AGTNoteTableViewController.xib */; };
 		A9BABF3C1C73A813007A4766 /* AGTCoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BABF3B1C73A813007A4766 /* AGTCoreDataTableViewController.m */; };
 		A9BABF3F1C73A867007A4766 /* AFMNotebooksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BABF3E1C73A867007A4766 /* AFMNotebooksViewController.m */; };
 		A9BABF431C73D43E007A4766 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = A9BABF421C73D43E007A4766 /* UIViewController+Navigation.m */; };
@@ -70,6 +72,9 @@
 		A9957E1C1D66FA790002C834 /* AFMNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMNoteViewController.m; sourceTree = "<group>"; };
 		A9957E1D1D66FA790002C834 /* AFMNoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFMNoteViewController.xib; sourceTree = "<group>"; };
 		A9957E201D6700EA0002C834 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A9AEB5C91D68B10D00C71758 /* AGTNoteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTNoteTableViewController.h; sourceTree = "<group>"; };
+		A9AEB5CA1D68B10D00C71758 /* AGTNoteTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTNoteTableViewController.m; sourceTree = "<group>"; };
+		A9AEB5CB1D68B10D00C71758 /* AGTNoteTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTNoteTableViewController.xib; sourceTree = "<group>"; };
 		A9B3BC741C727F6900A0E7DA /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		A9B3BC751C72800A00A0E7DA /* Everpobre-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Everpobre-Prefix.pch"; sourceTree = "<group>"; };
 		A9BABF3A1C73A813007A4766 /* AGTCoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTCoreDataTableViewController.h; sourceTree = "<group>"; };
@@ -179,6 +184,9 @@
 		A9BABF391C73A7FB007A4766 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A9AEB5C91D68B10D00C71758 /* AGTNoteTableViewController.h */,
+				A9AEB5CA1D68B10D00C71758 /* AGTNoteTableViewController.m */,
+				A9AEB5CB1D68B10D00C71758 /* AGTNoteTableViewController.xib */,
 				A9D4BF9E1D664BFA0015335D /* AGTCoreDataCollectionViewController.h */,
 				A9D4BF9F1D664BFA0015335D /* AGTCoreDataCollectionViewController.m */,
 				A9BABF3A1C73A813007A4766 /* AGTCoreDataTableViewController.h */,
@@ -296,6 +304,7 @@
 				A99040DB1C6F8C310055852B /* Assets.xcassets in Resources */,
 				A9D4BFA61D6657C20015335D /* noImage.png in Resources */,
 				A99040DE1C6F8C310055852B /* LaunchScreen.storyboard in Resources */,
+				A9AEB5CD1D68B10D00C71758 /* AGTNoteTableViewController.xib in Resources */,
 				A9D4BF9A1D661CD50015335D /* AFMNoteCollectionViewCell.xib in Resources */,
 				A9957E1F1D66FA790002C834 /* AFMNoteViewController.xib in Resources */,
 			);
@@ -328,6 +337,7 @@
 				A99041301C6FB5DA0055852B /* _AFMNotebook.m in Sources */,
 				A99041331C6FB5DA0055852B /* AFMNotebook.m in Sources */,
 				A99041321C6FB5DA0055852B /* AFMNote.m in Sources */,
+				A9AEB5CC1D68B10D00C71758 /* AGTNoteTableViewController.m in Sources */,
 				A990412E1C6FB5DA0055852B /* _AFMNamedEntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

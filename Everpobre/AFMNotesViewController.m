@@ -11,6 +11,7 @@
 #import "AFMNoteCellView.h"
 #import "AFMPhoto.h"
 #import "AFMNoteViewController.h"
+#import "AFMNotebook.h"
 
 static NSString* const cellId = @"NoteCellId";
 
@@ -31,6 +32,12 @@ static NSString* const cellId = @"NoteCellId";
                                                             alpha:1];
     self.title = @"Notas";
     self.detailViewControllerClassName = NSStringFromClass([AFMNoteViewController class]);
+    
+    UIBarButtonItem *add = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                         target:self
+                                                                         action:@selector(addNewNote:)];
+    
+    self.navigationItem.rightBarButtonItem = add;
 }
 
 #pragma mark - Xib registration
@@ -58,6 +65,14 @@ static NSString* const cellId = @"NoteCellId";
     [cell observeNote:note];
     
     return cell;
+}
+
+#pragma mark - Utils
+
+-(void) addNewNote:(id) sender {
+    AFMNoteViewController *newNoteVC = [[AFMNoteViewController alloc] initForNewNoteInNoteBook:self.notebook];
+    [self.navigationController pushViewController:newNoteVC
+                                         animated:YES];
 }
 
 @end

@@ -8,6 +8,10 @@
 
 #import "AGTCoreDataCollectionViewController.h"
 
+@class AFMNotebook;
+
 @interface AFMNotesViewController : AGTCoreDataCollectionViewController
+
+@property (nonatomic, strong) AFMNotebook *notebook;
 
 @end

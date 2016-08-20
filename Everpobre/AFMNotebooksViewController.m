@@ -117,8 +117,9 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
                             [NSSortDescriptor sortDescriptorWithKey:AFMNamedEntityAttributes.creationDate
                                                           ascending:NO]];
     
-    req.predicate = [NSPredicate predicateWithFormat:@"notebook == %@",
-                     [self.fetchedResultsController objectAtIndexPath:indexPath]];
+    AFMNotebook *notebook = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    req.predicate = [NSPredicate predicateWithFormat:@"notebook == %@", notebook];
     
     // Crear el fetched results controller
     NSFetchedResultsController *fC = [[NSFetchedResultsController alloc] initWithFetchRequest:req
@@ -137,6 +138,8 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
     AFMNotesViewController *notesVC = [AFMNotesViewController
                                        coreDataCollectionViewControllerWithFetchedResultsController:fC
                                        layout:layout];
+    
+    notesVC.notebook = notebook;
     
     // hacer push
     [self.navigationController pushViewController:notesVC
