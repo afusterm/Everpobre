@@ -10,6 +10,8 @@
 		A92F38621C8B062B00210558 /* AFMNotesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92F38611C8B062B00210558 /* AFMNotesTableViewController.m */; };
 		A95C32BB1C7068B100B157A7 /* _AFMPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = A95C32B81C7068B100B157A7 /* _AFMPhoto.m */; };
 		A95C32BC1C7068B100B157A7 /* AFMPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = A95C32BA1C7068B100B157A7 /* AFMPhoto.m */; };
+		A96113091D69FD2600395899 /* AFMPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A96113071D69FD2600395899 /* AFMPhotoViewController.m */; };
+		A961130A1D69FD2600395899 /* AFMPhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A96113081D69FD2600395899 /* AFMPhotoViewController.xib */; };
 		A99040D61C6F8C310055852B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A99040D51C6F8C310055852B /* main.m */; };
 		A99040D91C6F8C310055852B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A99040D81C6F8C310055852B /* AppDelegate.m */; };
 		A99040DB1C6F8C310055852B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A99040DA1C6F8C310055852B /* Assets.xcassets */; };
@@ -46,6 +48,9 @@
 		A95C32B81C7068B100B157A7 /* _AFMPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AFMPhoto.m; sourceTree = "<group>"; };
 		A95C32B91C7068B100B157A7 /* AFMPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMPhoto.h; sourceTree = "<group>"; };
 		A95C32BA1C7068B100B157A7 /* AFMPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMPhoto.m; sourceTree = "<group>"; };
+		A96113061D69FD2600395899 /* AFMPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMPhotoViewController.h; sourceTree = "<group>"; };
+		A96113071D69FD2600395899 /* AFMPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMPhotoViewController.m; sourceTree = "<group>"; };
+		A96113081D69FD2600395899 /* AFMPhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFMPhotoViewController.xib; sourceTree = "<group>"; };
 		A99040D11C6F8C310055852B /* Everpobre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Everpobre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A99040D51C6F8C310055852B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A99040D71C6F8C310055852B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -200,6 +205,9 @@
 				A9957E1B1D66FA790002C834 /* AFMNoteViewController.h */,
 				A9957E1C1D66FA790002C834 /* AFMNoteViewController.m */,
 				A9957E1D1D66FA790002C834 /* AFMNoteViewController.xib */,
+				A96113061D69FD2600395899 /* AFMPhotoViewController.h */,
+				A96113071D69FD2600395899 /* AFMPhotoViewController.m */,
+				A96113081D69FD2600395899 /* AFMPhotoViewController.xib */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -300,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A961130A1D69FD2600395899 /* AFMPhotoViewController.xib in Resources */,
 				A9BABF461C73D81E007A4766 /* AFMNotebookCellView.xib in Resources */,
 				A99040DB1C6F8C310055852B /* Assets.xcassets in Resources */,
 				A9D4BFA61D6657C20015335D /* noImage.png in Resources */,
@@ -327,6 +336,7 @@
 				A95C32BC1C7068B100B157A7 /* AFMPhoto.m in Sources */,
 				A9BABF3F1C73A867007A4766 /* AFMNotebooksViewController.m in Sources */,
 				A99040D61C6F8C310055852B /* main.m in Sources */,
+				A96113091D69FD2600395899 /* AFMPhotoViewController.m in Sources */,
 				A9BABF431C73D43E007A4766 /* UIViewController+Navigation.m in Sources */,
 				A990412F1C6FB5DA0055852B /* _AFMNote.m in Sources */,
 				A9D4BFA31D664C7B0015335D /* AFMNotesViewController.m in Sources */,

@@ -10,6 +10,7 @@
 #import "AFMNote.h"
 #import "AFMPhoto.h"
 #import "AFMNotebook.h"
+#import "AFMPhotoViewController.h"
 
 @interface AFMNoteViewController () <UITextFieldDelegate>
 @property (nonatomic, strong) AFMNote *model;
@@ -69,7 +70,18 @@
         self.navigationItem.rightBarButtonItem = cancel;
     }
     
+    self.nameView.delegate = self;
     
+    // Añadimos un gesture recognizer a la foto
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                          action:@selector(displayDetailPhoto:)];
+    [self.photoView addGestureRecognizer:tap];
+    
+    // Añadimos botón de compartir nota
+    UIBarButtonItem *share = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+                                                                           target:self
+                                                                           action:@selector(displayShareController:)];
+    self.navigationItem.rightBarButtonItem = share;
 }
 
 -(void) viewWillDisappear:(BOOL)animated {
@@ -202,6 +214,24 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+-(NSArray *) arrayOfItems {
+    NSMutableArray *items = [NSMutableArray array];
+    
+    if (self.model.name) {
+        [items addObject:self.model.name];
+    }
+    
+    if (self.model.text) {
+        [items addObject:self.model.text];
+    }
+    
+    if (self.model.photo.image) {
+        [items addObject:self.model.photo.image];
+    }
+    
+    return items;
+}
+
 #pragma mark - UITextFieldDelegate
 
 -(BOOL) textFieldShouldReturn:(UITextField *)textField {
@@ -210,6 +240,31 @@
     [textField resignFirstResponder];
     
     return YES;
+}
+
+#pragma mark - Actions
+
+-(void) displayDetailPhoto:(id) sender {
+    if (self.model.photo == nil) {
+        self.model.photo = [AFMPhoto photoWithImage:nil
+                                            context:self.model.managedObjectContext];
+    }
+                            
+    AFMPhotoViewController *pVC = [[AFMPhotoViewController alloc] initWithModel:self.model.photo];
+    
+    [self.navigationController pushViewController:pVC
+                                         animated:YES];
+}
+
+-(void) displayShareController:(id) sender {
+    // Crear un UIActivityController
+    UIActivityViewController *avc = [[UIActivityViewController alloc] initWithActivityItems:[self arrayOfItems]
+                                                                      applicationActivities:nil];
+    
+    // Lo presentamos
+    [self presentViewController:avc
+                       animated:YES
+                     completion:nil];
 }
 
 @end
