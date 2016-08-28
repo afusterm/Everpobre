@@ -1,41 +1,38 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
 // Make changes to AFMNote.h instead.
 
-#import <CoreData/CoreData.h>
+#if __has_feature(modules)
+    @import Foundation;
+    @import CoreData;
+#else
+    #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+#endif
+
 #import "AFMNamedEntity.h"
 
-extern const struct AFMNoteAttributes {
-	__unsafe_unretained NSString *text;
-} AFMNoteAttributes;
+NS_ASSUME_NONNULL_BEGIN
 
-extern const struct AFMNoteRelationships {
-	__unsafe_unretained NSString *notebook;
-	__unsafe_unretained NSString *photo;
-} AFMNoteRelationships;
-
+@class AFMLocation;
 @class AFMNotebook;
 @class AFMPhoto;
 
 @interface AFMNoteID : AFMNamedEntityID {}
 @end
 
-@interface _AFMNote : AFMNamedEntity {}
-+ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
+@interface _AFMNote : AFMNamedEntity
++ (instancetype)insertInManagedObjectContext:(NSManagedObjectContext *)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
-@property (nonatomic, readonly, strong) AFMNoteID* objectID;
+@property (nonatomic, readonly, strong) AFMNoteID *objectID;
 
-@property (nonatomic, strong) NSString* text;
+@property (nonatomic, strong, nullable) NSString* text;
 
-//- (BOOL)validateText:(id*)value_ error:(NSError**)error_;
+@property (nonatomic, strong, nullable) AFMLocation *location;
 
 @property (nonatomic, strong) AFMNotebook *notebook;
 
-//- (BOOL)validateNotebook:(id*)value_ error:(NSError**)error_;
-
-@property (nonatomic, strong) AFMPhoto *photo;
-
-//- (BOOL)validatePhoto:(id*)value_ error:(NSError**)error_;
+@property (nonatomic, strong, nullable) AFMPhoto *photo;
 
 @end
 
@@ -44,6 +41,9 @@ extern const struct AFMNoteRelationships {
 - (NSString*)primitiveText;
 - (void)setPrimitiveText:(NSString*)value;
 
+- (AFMLocation*)primitiveLocation;
+- (void)setPrimitiveLocation:(AFMLocation*)value;
+
 - (AFMNotebook*)primitiveNotebook;
 - (void)setPrimitiveNotebook:(AFMNotebook*)value;
 
@@ -51,3 +51,15 @@ extern const struct AFMNoteRelationships {
 - (void)setPrimitivePhoto:(AFMPhoto*)value;
 
 @end
+
+@interface AFMNoteAttributes: NSObject 
++ (NSString *)text;
+@end
+
+@interface AFMNoteRelationships: NSObject
++ (NSString *)location;
++ (NSString *)notebook;
++ (NSString *)photo;
+@end
+
+NS_ASSUME_NONNULL_END

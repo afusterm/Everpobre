@@ -3,20 +3,12 @@
 
 #import "_AFMPhoto.h"
 
-const struct AFMPhotoAttributes AFMPhotoAttributes = {
-	.imageData = @"imageData",
-};
-
-const struct AFMPhotoRelationships AFMPhotoRelationships = {
-	.notes = @"notes",
-};
-
 @implementation AFMPhotoID
 @end
 
 @implementation _AFMPhoto
 
-+ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_ {
++ (instancetype)insertInManagedObjectContext:(NSManagedObjectContext *)moc_ {
 	NSParameterAssert(moc_);
 	return [NSEntityDescription insertNewObjectForEntityForName:@"Photo" inManagedObjectContext:moc_];
 }
@@ -44,5 +36,17 @@ const struct AFMPhotoRelationships AFMPhotoRelationships = {
 
 @dynamic notes;
 
+@end
+
+@implementation AFMPhotoAttributes 
++ (NSString *)imageData {
+	return @"imageData";
+}
+@end
+
+@implementation AFMPhotoRelationships 
++ (NSString *)notes {
+	return @"notes";
+}
 @end
 

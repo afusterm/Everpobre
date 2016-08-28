@@ -1,33 +1,37 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
 // Make changes to AFMNotebook.h instead.
 
-#import <CoreData/CoreData.h>
+#if __has_feature(modules)
+    @import Foundation;
+    @import CoreData;
+#else
+    #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+#endif
+
 #import "AFMNamedEntity.h"
 
-extern const struct AFMNotebookRelationships {
-	__unsafe_unretained NSString *notes;
-} AFMNotebookRelationships;
+NS_ASSUME_NONNULL_BEGIN
 
 @class AFMNote;
 
 @interface AFMNotebookID : AFMNamedEntityID {}
 @end
 
-@interface _AFMNotebook : AFMNamedEntity {}
-+ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
+@interface _AFMNotebook : AFMNamedEntity
++ (instancetype)insertInManagedObjectContext:(NSManagedObjectContext *)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
-@property (nonatomic, readonly, strong) AFMNotebookID* objectID;
+@property (nonatomic, readonly, strong) AFMNotebookID *objectID;
 
-@property (nonatomic, strong) NSSet *notes;
-
-- (NSMutableSet*)notesSet;
+@property (nonatomic, strong, nullable) NSSet<AFMNote*> *notes;
+- (nullable NSMutableSet<AFMNote*>*)notesSet;
 
 @end
 
 @interface _AFMNotebook (NotesCoreDataGeneratedAccessors)
-- (void)addNotes:(NSSet*)value_;
-- (void)removeNotes:(NSSet*)value_;
+- (void)addNotes:(NSSet<AFMNote*>*)value_;
+- (void)removeNotes:(NSSet<AFMNote*>*)value_;
 - (void)addNotesObject:(AFMNote*)value_;
 - (void)removeNotesObject:(AFMNote*)value_;
 
@@ -35,7 +39,13 @@ extern const struct AFMNotebookRelationships {
 
 @interface _AFMNotebook (CoreDataGeneratedPrimitiveAccessors)
 
-- (NSMutableSet*)primitiveNotes;
-- (void)setPrimitiveNotes:(NSMutableSet*)value;
+- (NSMutableSet<AFMNote*>*)primitiveNotes;
+- (void)setPrimitiveNotes:(NSMutableSet<AFMNote*>*)value;
 
 @end
+
+@interface AFMNotebookRelationships: NSObject
++ (NSString *)notes;
+@end
+
+NS_ASSUME_NONNULL_END

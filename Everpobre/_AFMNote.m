@@ -3,21 +3,12 @@
 
 #import "_AFMNote.h"
 
-const struct AFMNoteAttributes AFMNoteAttributes = {
-	.text = @"text",
-};
-
-const struct AFMNoteRelationships AFMNoteRelationships = {
-	.notebook = @"notebook",
-	.photo = @"photo",
-};
-
 @implementation AFMNoteID
 @end
 
 @implementation _AFMNote
 
-+ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_ {
++ (instancetype)insertInManagedObjectContext:(NSManagedObjectContext *)moc_ {
 	NSParameterAssert(moc_);
 	return [NSEntityDescription insertNewObjectForEntityForName:@"Note" inManagedObjectContext:moc_];
 }
@@ -43,9 +34,29 @@ const struct AFMNoteRelationships AFMNoteRelationships = {
 
 @dynamic text;
 
+@dynamic location;
+
 @dynamic notebook;
 
 @dynamic photo;
 
+@end
+
+@implementation AFMNoteAttributes 
++ (NSString *)text {
+	return @"text";
+}
+@end
+
+@implementation AFMNoteRelationships 
++ (NSString *)location {
+	return @"location";
+}
++ (NSString *)notebook {
+	return @"notebook";
+}
++ (NSString *)photo {
+	return @"photo";
+}
 @end
 

@@ -3,18 +3,12 @@
 
 #import "_AFMNamedEntity.h"
 
-const struct AFMNamedEntityAttributes AFMNamedEntityAttributes = {
-	.creationDate = @"creationDate",
-	.modificationDate = @"modificationDate",
-	.name = @"name",
-};
-
 @implementation AFMNamedEntityID
 @end
 
 @implementation _AFMNamedEntity
 
-+ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_ {
++ (instancetype)insertInManagedObjectContext:(NSManagedObjectContext *)moc_ {
 	NSParameterAssert(moc_);
 	return [NSEntityDescription insertNewObjectForEntityForName:@"NamedEntity" inManagedObjectContext:moc_];
 }
@@ -44,5 +38,17 @@ const struct AFMNamedEntityAttributes AFMNamedEntityAttributes = {
 
 @dynamic name;
 
+@end
+
+@implementation AFMNamedEntityAttributes 
++ (NSString *)creationDate {
+	return @"creationDate";
+}
++ (NSString *)modificationDate {
+	return @"modificationDate";
+}
++ (NSString *)name {
+	return @"name";
+}
 @end
 

@@ -3,16 +3,12 @@
 
 #import "_AFMNotebook.h"
 
-const struct AFMNotebookRelationships AFMNotebookRelationships = {
-	.notes = @"notes",
-};
-
 @implementation AFMNotebookID
 @end
 
 @implementation _AFMNotebook
 
-+ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_ {
++ (instancetype)insertInManagedObjectContext:(NSManagedObjectContext *)moc_ {
 	NSParameterAssert(moc_);
 	return [NSEntityDescription insertNewObjectForEntityForName:@"Notebook" inManagedObjectContext:moc_];
 }
@@ -38,14 +34,20 @@ const struct AFMNotebookRelationships AFMNotebookRelationships = {
 
 @dynamic notes;
 
-- (NSMutableSet*)notesSet {
+- (NSMutableSet<AFMNote*>*)notesSet {
 	[self willAccessValueForKey:@"notes"];
 
-	NSMutableSet *result = (NSMutableSet*)[self mutableSetValueForKey:@"notes"];
+	NSMutableSet<AFMNote*> *result = (NSMutableSet<AFMNote*>*)[self mutableSetValueForKey:@"notes"];
 
 	[self didAccessValueForKey:@"notes"];
 	return result;
 }
 
+@end
+
+@implementation AFMNotebookRelationships 
++ (NSString *)notes {
+	return @"notes";
+}
 @end
 

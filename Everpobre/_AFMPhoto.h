@@ -1,34 +1,30 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
 // Make changes to AFMPhoto.h instead.
 
-#import <CoreData/CoreData.h>
+#if __has_feature(modules)
+    @import Foundation;
+    @import CoreData;
+#else
+    #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+#endif
 
-extern const struct AFMPhotoAttributes {
-	__unsafe_unretained NSString *imageData;
-} AFMPhotoAttributes;
-
-extern const struct AFMPhotoRelationships {
-	__unsafe_unretained NSString *notes;
-} AFMPhotoRelationships;
+NS_ASSUME_NONNULL_BEGIN
 
 @class AFMNote;
 
 @interface AFMPhotoID : NSManagedObjectID {}
 @end
 
-@interface _AFMPhoto : NSManagedObject {}
-+ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
+@interface _AFMPhoto : NSManagedObject
++ (instancetype)insertInManagedObjectContext:(NSManagedObjectContext *)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
-@property (nonatomic, readonly, strong) AFMPhotoID* objectID;
+@property (nonatomic, readonly, strong) AFMPhotoID *objectID;
 
 @property (nonatomic, strong) NSData* imageData;
 
-//- (BOOL)validateImageData:(id*)value_ error:(NSError**)error_;
-
 @property (nonatomic, strong) AFMNote *notes;
-
-//- (BOOL)validateNotes:(id*)value_ error:(NSError**)error_;
 
 @end
 
@@ -41,3 +37,13 @@ extern const struct AFMPhotoRelationships {
 - (void)setPrimitiveNotes:(AFMNote*)value;
 
 @end
+
+@interface AFMPhotoAttributes: NSObject 
++ (NSString *)imageData;
+@end
+
+@interface AFMPhotoRelationships: NSObject
++ (NSString *)notes;
+@end
+
+NS_ASSUME_NONNULL_END

@@ -1,34 +1,30 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
 // Make changes to AFMNamedEntity.h instead.
 
-#import <CoreData/CoreData.h>
+#if __has_feature(modules)
+    @import Foundation;
+    @import CoreData;
+#else
+    #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+#endif
 
-extern const struct AFMNamedEntityAttributes {
-	__unsafe_unretained NSString *creationDate;
-	__unsafe_unretained NSString *modificationDate;
-	__unsafe_unretained NSString *name;
-} AFMNamedEntityAttributes;
+NS_ASSUME_NONNULL_BEGIN
 
 @interface AFMNamedEntityID : NSManagedObjectID {}
 @end
 
-@interface _AFMNamedEntity : NSManagedObject {}
-+ (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
+@interface _AFMNamedEntity : NSManagedObject
++ (instancetype)insertInManagedObjectContext:(NSManagedObjectContext *)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
-@property (nonatomic, readonly, strong) AFMNamedEntityID* objectID;
+@property (nonatomic, readonly, strong) AFMNamedEntityID *objectID;
 
 @property (nonatomic, strong) NSDate* creationDate;
 
-//- (BOOL)validateCreationDate:(id*)value_ error:(NSError**)error_;
-
 @property (nonatomic, strong) NSDate* modificationDate;
 
-//- (BOOL)validateModificationDate:(id*)value_ error:(NSError**)error_;
-
 @property (nonatomic, strong) NSString* name;
-
-//- (BOOL)validateName:(id*)value_ error:(NSError**)error_;
 
 @end
 
@@ -44,3 +40,11 @@ extern const struct AFMNamedEntityAttributes {
 - (void)setPrimitiveName:(NSString*)value;
 
 @end
+
+@interface AFMNamedEntityAttributes: NSObject 
++ (NSString *)creationDate;
++ (NSString *)modificationDate;
++ (NSString *)name;
+@end
+
+NS_ASSUME_NONNULL_END

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A92F38621C8B062B00210558 /* AFMNotesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92F38611C8B062B00210558 /* AFMNotesTableViewController.m */; };
+		A93AC9D01D72C3200041823A /* _AFMLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A93AC9CD1D72C3200041823A /* _AFMLocation.m */; };
+		A93AC9D11D72C3200041823A /* AFMLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A93AC9CF1D72C3200041823A /* AFMLocation.m */; };
 		A95C32BB1C7068B100B157A7 /* _AFMPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = A95C32B81C7068B100B157A7 /* _AFMPhoto.m */; };
 		A95C32BC1C7068B100B157A7 /* AFMPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = A95C32BA1C7068B100B157A7 /* AFMPhoto.m */; };
 		A96113091D69FD2600395899 /* AFMPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A96113071D69FD2600395899 /* AFMPhotoViewController.m */; };
@@ -44,6 +46,11 @@
 /* Begin PBXFileReference section */
 		A92F38601C8B062B00210558 /* AFMNotesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMNotesTableViewController.h; sourceTree = "<group>"; };
 		A92F38611C8B062B00210558 /* AFMNotesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMNotesTableViewController.m; sourceTree = "<group>"; };
+		A93AC9CB1D72BCDD0041823A /* Model2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model2.xcdatamodel; sourceTree = "<group>"; };
+		A93AC9CC1D72C3200041823A /* _AFMLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AFMLocation.h; sourceTree = "<group>"; };
+		A93AC9CD1D72C3200041823A /* _AFMLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AFMLocation.m; sourceTree = "<group>"; };
+		A93AC9CE1D72C3200041823A /* AFMLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMLocation.h; sourceTree = "<group>"; };
+		A93AC9CF1D72C3200041823A /* AFMLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMLocation.m; sourceTree = "<group>"; };
 		A95C32B71C7068B100B157A7 /* _AFMPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AFMPhoto.h; sourceTree = "<group>"; };
 		A95C32B81C7068B100B157A7 /* _AFMPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AFMPhoto.m; sourceTree = "<group>"; };
 		A95C32B91C7068B100B157A7 /* AFMPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMPhoto.h; sourceTree = "<group>"; };
@@ -163,6 +170,10 @@
 		A99040E51C6F8C3C0055852B /* Modelos */ = {
 			isa = PBXGroup;
 			children = (
+				A93AC9CC1D72C3200041823A /* _AFMLocation.h */,
+				A93AC9CD1D72C3200041823A /* _AFMLocation.m */,
+				A93AC9CE1D72C3200041823A /* AFMLocation.h */,
+				A93AC9CF1D72C3200041823A /* AFMLocation.m */,
 				A95C32B71C7068B100B157A7 /* _AFMPhoto.h */,
 				A95C32B81C7068B100B157A7 /* _AFMPhoto.m */,
 				A95C32B91C7068B100B157A7 /* AFMPhoto.h */,
@@ -339,6 +350,8 @@
 				A96113091D69FD2600395899 /* AFMPhotoViewController.m in Sources */,
 				A9BABF431C73D43E007A4766 /* UIViewController+Navigation.m in Sources */,
 				A990412F1C6FB5DA0055852B /* _AFMNote.m in Sources */,
+				A93AC9D01D72C3200041823A /* _AFMLocation.m in Sources */,
+				A93AC9D11D72C3200041823A /* AFMLocation.m in Sources */,
 				A9D4BFA31D664C7B0015335D /* AFMNotesViewController.m in Sources */,
 				A99040E81C6F8D3B0055852B /* AGTSimpleCoreDataStack.m in Sources */,
 				A9D4BFA01D664BFA0015335D /* AGTCoreDataCollectionViewController.m in Sources */,
@@ -497,9 +510,10 @@
 		A99040E91C6F949A0055852B /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				A93AC9CB1D72BCDD0041823A /* Model2.xcdatamodel */,
 				A99040EA1C6F949A0055852B /* Model.xcdatamodel */,
 			);
-			currentVersion = A99040EA1C6F949A0055852B /* Model.xcdatamodel */;
+			currentVersion = A93AC9CB1D72BCDD0041823A /* Model2.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
