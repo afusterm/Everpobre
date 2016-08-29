@@ -85,6 +85,8 @@
 	[self setPrimitiveLongitude:@(value_)];
 }
 
+@dynamic mapSnapshot;
+
 @dynamic notes;
 
 - (NSMutableSet<AFMNote*>*)notesSet {
@@ -111,6 +113,9 @@
 @end
 
 @implementation AFMLocationRelationships 
++ (NSString *)mapSnapshot {
+	return @"mapSnapshot";
+}
 + (NSString *)notes {
 	return @"notes";
 }

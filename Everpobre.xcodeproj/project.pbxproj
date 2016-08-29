@@ -10,6 +10,8 @@
 		A92F38621C8B062B00210558 /* AFMNotesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92F38611C8B062B00210558 /* AFMNotesTableViewController.m */; };
 		A93AC9D01D72C3200041823A /* _AFMLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A93AC9CD1D72C3200041823A /* _AFMLocation.m */; };
 		A93AC9D11D72C3200041823A /* AFMLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = A93AC9CF1D72C3200041823A /* AFMLocation.m */; };
+		A942AA421D74C9BA001D1D37 /* _AFMMapSnapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = A942AA3F1D74C9BA001D1D37 /* _AFMMapSnapshot.m */; };
+		A942AA431D74C9BA001D1D37 /* AFMMapSnapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = A942AA411D74C9BA001D1D37 /* AFMMapSnapshot.m */; };
 		A95C32BB1C7068B100B157A7 /* _AFMPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = A95C32B81C7068B100B157A7 /* _AFMPhoto.m */; };
 		A95C32BC1C7068B100B157A7 /* AFMPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = A95C32BA1C7068B100B157A7 /* AFMPhoto.m */; };
 		A96113091D69FD2600395899 /* AFMPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A96113071D69FD2600395899 /* AFMPhotoViewController.m */; };
@@ -41,6 +43,7 @@
 		A9D4BFA01D664BFA0015335D /* AGTCoreDataCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D4BF9F1D664BFA0015335D /* AGTCoreDataCollectionViewController.m */; };
 		A9D4BFA31D664C7B0015335D /* AFMNotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9D4BFA21D664C7B0015335D /* AFMNotesViewController.m */; };
 		A9D4BFA61D6657C20015335D /* noImage.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D4BFA51D6657C20015335D /* noImage.png */; };
+		A9D87BDB1D733782000F5B7F /* placemark.png in Resources */ = {isa = PBXBuildFile; fileRef = A9D87BDA1D733782000F5B7F /* placemark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +54,11 @@
 		A93AC9CD1D72C3200041823A /* _AFMLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AFMLocation.m; sourceTree = "<group>"; };
 		A93AC9CE1D72C3200041823A /* AFMLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMLocation.h; sourceTree = "<group>"; };
 		A93AC9CF1D72C3200041823A /* AFMLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMLocation.m; sourceTree = "<group>"; };
+		A942AA3D1D74C514001D1D37 /* Model3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model3.xcdatamodel; sourceTree = "<group>"; };
+		A942AA3E1D74C9BA001D1D37 /* _AFMMapSnapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AFMMapSnapshot.h; sourceTree = "<group>"; };
+		A942AA3F1D74C9BA001D1D37 /* _AFMMapSnapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AFMMapSnapshot.m; sourceTree = "<group>"; };
+		A942AA401D74C9BA001D1D37 /* AFMMapSnapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMMapSnapshot.h; sourceTree = "<group>"; };
+		A942AA411D74C9BA001D1D37 /* AFMMapSnapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMMapSnapshot.m; sourceTree = "<group>"; };
 		A95C32B71C7068B100B157A7 /* _AFMPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _AFMPhoto.h; sourceTree = "<group>"; };
 		A95C32B81C7068B100B157A7 /* _AFMPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _AFMPhoto.m; sourceTree = "<group>"; };
 		A95C32B91C7068B100B157A7 /* AFMPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMPhoto.h; sourceTree = "<group>"; };
@@ -107,6 +115,7 @@
 		A9D4BFA11D664C7B0015335D /* AFMNotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFMNotesViewController.h; sourceTree = "<group>"; };
 		A9D4BFA21D664C7B0015335D /* AFMNotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFMNotesViewController.m; sourceTree = "<group>"; };
 		A9D4BFA51D6657C20015335D /* noImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noImage.png; sourceTree = "<group>"; };
+		A9D87BDA1D733782000F5B7F /* placemark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placemark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +179,10 @@
 		A99040E51C6F8C3C0055852B /* Modelos */ = {
 			isa = PBXGroup;
 			children = (
+				A942AA3E1D74C9BA001D1D37 /* _AFMMapSnapshot.h */,
+				A942AA3F1D74C9BA001D1D37 /* _AFMMapSnapshot.m */,
+				A942AA401D74C9BA001D1D37 /* AFMMapSnapshot.h */,
+				A942AA411D74C9BA001D1D37 /* AFMMapSnapshot.m */,
 				A93AC9CC1D72C3200041823A /* _AFMLocation.h */,
 				A93AC9CD1D72C3200041823A /* _AFMLocation.m */,
 				A93AC9CE1D72C3200041823A /* AFMLocation.h */,
@@ -256,6 +269,7 @@
 		A9D4BFA41D6657B10015335D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A9D87BDA1D733782000F5B7F /* placemark.png */,
 				A9D4BFA51D6657C20015335D /* noImage.png */,
 			);
 			name = Resources;
@@ -320,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A961130A1D69FD2600395899 /* AFMPhotoViewController.xib in Resources */,
+				A9D87BDB1D733782000F5B7F /* placemark.png in Resources */,
 				A9BABF461C73D81E007A4766 /* AFMNotebookCellView.xib in Resources */,
 				A99040DB1C6F8C310055852B /* Assets.xcassets in Resources */,
 				A9D4BFA61D6657C20015335D /* noImage.png in Resources */,
@@ -348,6 +363,7 @@
 				A9BABF3F1C73A867007A4766 /* AFMNotebooksViewController.m in Sources */,
 				A99040D61C6F8C310055852B /* main.m in Sources */,
 				A96113091D69FD2600395899 /* AFMPhotoViewController.m in Sources */,
+				A942AA421D74C9BA001D1D37 /* _AFMMapSnapshot.m in Sources */,
 				A9BABF431C73D43E007A4766 /* UIViewController+Navigation.m in Sources */,
 				A990412F1C6FB5DA0055852B /* _AFMNote.m in Sources */,
 				A93AC9D01D72C3200041823A /* _AFMLocation.m in Sources */,
@@ -361,6 +377,7 @@
 				A99041331C6FB5DA0055852B /* AFMNotebook.m in Sources */,
 				A99041321C6FB5DA0055852B /* AFMNote.m in Sources */,
 				A9AEB5CC1D68B10D00C71758 /* AGTNoteTableViewController.m in Sources */,
+				A942AA431D74C9BA001D1D37 /* AFMMapSnapshot.m in Sources */,
 				A990412E1C6FB5DA0055852B /* _AFMNamedEntity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,10 +527,11 @@
 		A99040E91C6F949A0055852B /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				A942AA3D1D74C514001D1D37 /* Model3.xcdatamodel */,
 				A93AC9CB1D72BCDD0041823A /* Model2.xcdatamodel */,
 				A99040EA1C6F949A0055852B /* Model.xcdatamodel */,
 			);
-			currentVersion = A93AC9CB1D72BCDD0041823A /* Model2.xcdatamodel */;
+			currentVersion = A942AA3D1D74C514001D1D37 /* Model3.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -17,7 +17,8 @@
 @implementation AFMNoteCellView
 
 +(NSArray *) keys {
-    return @[@"title", @"modificationDate", @"photo.image"];
+    return @[@"title", @"modificationDate", @"photo.image", @"name", @"location", @"location.latitude",
+             @"location.longitude", @"location.address"];
 }
 
 -(void) observeNote:(AFMNote *) note {
@@ -51,6 +52,12 @@
     }
     
     self.photoView.image = img;
+    
+    if (self.note.hasLocation) {
+        self.locationView.image = [UIImage imageNamed:@"placemark.png"];
+    } else {
+        self.locationView.image = nil;
+    }
 }
 
 -(void) observeValueForKeyPath:(NSString *)keyPath

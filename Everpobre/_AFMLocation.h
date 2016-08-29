@@ -11,6 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class AFMMapSnapshot;
 @class AFMNote;
 
 @interface AFMLocationID : NSManagedObjectID {}
@@ -35,6 +36,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (atomic) double longitudeValue;
 - (double)longitudeValue;
 - (void)setLongitudeValue:(double)value_;
+
+@property (nonatomic, strong, nullable) AFMMapSnapshot *mapSnapshot;
 
 @property (nonatomic, strong) NSSet<AFMNote*> *notes;
 - (NSMutableSet<AFMNote*>*)notesSet;
@@ -66,6 +69,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (double)primitiveLongitudeValue;
 - (void)setPrimitiveLongitudeValue:(double)value_;
 
+- (AFMMapSnapshot*)primitiveMapSnapshot;
+- (void)setPrimitiveMapSnapshot:(AFMMapSnapshot*)value;
+
 - (NSMutableSet<AFMNote*>*)primitiveNotes;
 - (void)setPrimitiveNotes:(NSMutableSet<AFMNote*>*)value;
 
@@ -78,6 +84,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 @interface AFMLocationRelationships: NSObject
++ (NSString *)mapSnapshot;
 + (NSString *)notes;
 @end
 

@@ -1,5 +1,10 @@
 #import "_AFMLocation.h"
 
+@import CoreLocation;
+
+@class AFMNote;
+
 @interface AFMLocation : _AFMLocation
-// Custom logic goes here.
++(instancetype) locationWithCLLocation:(CLLocation *) location
+                               forNote:(AFMNote *) note;
 @end

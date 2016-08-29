@@ -32,11 +32,16 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="qX1-Dd-J7w">
+                        <rect key="frame" x="115" y="87" width="25" height="25"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="locationView" destination="qX1-Dd-J7w" id="0dy-aj-yHx"/>
                 <outlet property="modificationDateView" destination="8P4-dk-143" id="MBb-QC-Wel"/>
                 <outlet property="photoView" destination="N1I-cA-HNd" id="Hat-MN-rEp"/>
                 <outlet property="titleView" destination="JAf-SO-Inw" id="g0i-0T-vcg"/>
