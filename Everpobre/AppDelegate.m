@@ -43,6 +43,11 @@
                                                           ascending:NO],
                             [NSSortDescriptor sortDescriptorWithKey:AFMNamedEntityAttributes.name
                                                           ascending:YES]];
+    
+    // tamaño del lote en que va a ir cargando. Una guía para el tamaño es poner el doble
+    // de los datos que se vayan a mostrar. Para 10 celdas poner 20.
+    req.fetchBatchSize = 20;
+    
     NSFetchedResultsController *results = [[NSFetchedResultsController alloc] initWithFetchRequest:req
                                                                               managedObjectContext:self.model.context
                                                                                 sectionNameKeyPath:nil

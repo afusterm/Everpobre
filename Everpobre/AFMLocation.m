@@ -1,5 +1,8 @@
 #import "AFMLocation.h"
 #import "AFMNote.h"
+#import "AFMMapSnapshot.h"
+
+#import <CoreLocation/CoreLocation.h>
 
 @import AddressBookUI;
 
@@ -39,7 +42,7 @@
         loc.longitudeValue = location.coordinate.longitude;
         [loc addNotesObject:note];
         
-        // Dirección
+        // Creamos la dirección
         CLGeocoder *coder = [CLGeocoder new];
         [coder reverseGeocodeLocation:location
                     completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
@@ -51,8 +54,32 @@
                         }
                     }];
         
+        // Crear un mapSnapshot
+        loc.mapSnapshot = [AFMMapSnapshot mapSnapshotForLocation:loc];
+        
         return loc;
     }
+}
+
+#pragma mark - MKAnnotation
+
+-(NSString *) title {
+    return @"I wrote a note here!";
+}
+
+-(NSString *) subtitle {
+    NSArray *lines = [self.address componentsSeparatedByString:@"\n"];
+    NSMutableString *concat = [@"" mutableCopy];
+    
+    for (NSString *line in lines) {
+        [concat appendFormat:@"%@", line];
+    }
+    
+    return concat;
+}
+
+-(CLLocationCoordinate2D) coordinate {
+    return CLLocationCoordinate2DMake(self.latitudeValue, self.longitudeValue);
 }
 
 @end

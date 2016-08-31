@@ -1,5 +1,8 @@
 #import "_AFMMapSnapshot.h"
 
 @interface AFMMapSnapshot : _AFMMapSnapshot
-// Custom logic goes here.
+@property (nonatomic, strong) UIImage *image;
+
++(instancetype) mapSnapshotForLocation:(AFMLocation *) location;
+
 @end

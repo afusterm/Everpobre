@@ -117,6 +117,8 @@ forRowAtIndexPath:(NSIndexPath *)indexPath {
                             [NSSortDescriptor sortDescriptorWithKey:AFMNamedEntityAttributes.creationDate
                                                           ascending:NO]];
     
+    req.fetchBatchSize = 20;
+    
     AFMNotebook *notebook = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     req.predicate = [NSPredicate predicateWithFormat:@"notebook == %@", notebook];

@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AFMNoteViewController">
             <connections>
-                <outlet property="mapView" destination="Wby-uG-amS" id="bsw-47-IT8"/>
+                <outlet property="mapSnapshotView" destination="Ie8-WC-r1P" id="dcF-xj-gDc"/>
                 <outlet property="modificationDateView" destination="g7x-QQ-WYf" id="m1N-Mj-j9u"/>
                 <outlet property="nameView" destination="gZ0-dS-iHe" id="uA9-SN-an9"/>
                 <outlet property="photoView" destination="GBQ-mS-3eL" id="vgz-AO-0qi"/>
@@ -28,10 +28,6 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="Wby-uG-amS">
-                    <rect key="frame" x="170" y="161" width="150" height="150"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </mapView>
                 <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="GBQ-mS-3eL">
                     <rect key="frame" x="0.0" y="161" width="150" height="150"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -52,6 +48,10 @@
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Ie8-WC-r1P">
+                    <rect key="frame" x="170" y="161" width="150" height="150"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>

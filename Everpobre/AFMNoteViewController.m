@@ -11,8 +11,11 @@
 #import "AFMPhoto.h"
 #import "AFMNotebook.h"
 #import "AFMPhotoViewController.h"
+#import "AFMLocation.h"
+#import "AFMMapSnapshot.h"
+#import "AFMLocationViewController.h"
 
-@interface AFMNoteViewController () <UITextFieldDelegate>
+@interface AFMNoteViewController () <UITextFieldDelegate, UITextViewDelegate>
 @property (nonatomic, strong) AFMNote *model;
 @property (nonatomic) BOOL new;
 @property (nonatomic) BOOL deleteCurrentNote;
@@ -52,12 +55,27 @@
     self.nameView.text = self.model.name;
     self.textView.text = self.model.text;
     
+    
+    // Image
     UIImage *img = self.model.photo.image;
     if (!img) {
         img = [UIImage imageNamed:@"noImage.png"];
     }
     
     self.photoView.image = img;
+    
+    // Snapshot
+    img = self.model.location.mapSnapshot.image;
+    self.mapSnapshotView.userInteractionEnabled = YES;
+    
+    if (!img) {
+        img = [UIImage imageNamed:@"noSnapshot.png"];
+        self.mapSnapshotView.userInteractionEnabled = NO;
+    }
+    
+    self.mapSnapshotView.image = img;
+    
+    [self startObservingSnapshot];
     
     [self startObservingKeyboard];
     [self setupInputAccessoryView];
@@ -71,11 +89,17 @@
     }
     
     self.nameView.delegate = self;
+    self.textView.delegate = self;
     
     // Añadimos un gesture recognizer a la foto
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                           action:@selector(displayDetailPhoto:)];
     [self.photoView addGestureRecognizer:tap];
+    
+    // Gesture recognizer para vista de location
+    UITapGestureRecognizer *snapTap = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                              action:@selector(displayDetailLocation:)];
+    [self.mapSnapshotView addGestureRecognizer:snapTap];
     
     // Añadimos botón de compartir nota
     UIBarButtonItem *share = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction
@@ -97,6 +121,7 @@
     }
     
     [self stopObservingKeyboard];
+    [self stopObservingSnapshot];
 }
 
 #pragma mark - Keyboard
@@ -265,6 +290,40 @@
     [self presentViewController:avc
                        animated:YES
                      completion:nil];
+}
+
+-(void) displayDetailLocation:(id) sender {
+    AFMLocationViewController *locVC = [[AFMLocationViewController alloc] initWithLocation:self.model.location];
+    [self.navigationController pushViewController:locVC
+                                         animated:YES];
+}
+
+#pragma mark - KVO
+
+-(void) startObservingSnapshot {
+    [self.model addObserver:self
+                 forKeyPath:@"location.mapSnapshot.snapshotData"
+                    options:NSKeyValueObservingOptionNew
+                    context:NULL];
+}
+
+-(void) stopObservingSnapshot {
+    [self.model removeObserver:self
+                    forKeyPath:@"location.mapSnapshot.snapshotData"];
+}
+
+-(void) observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary<NSString *,id> *)change
+                       context:(void *)context {
+    UIImage *img = self.model.location.mapSnapshot.image;
+    self.mapSnapshotView.userInteractionEnabled = YES;
+    if (!img) {
+        self.mapSnapshotView.userInteractionEnabled = NO;
+        img = [UIImage imageNamed:@"noSnapshot.png"];
+    }
+    
+    self.mapSnapshotView.image = img;
 }
 
 @end

@@ -4,7 +4,7 @@
 
 @class AFMNote;
 
-@interface AFMLocation : _AFMLocation
+@interface AFMLocation : _AFMLocation<MKAnnotation>
 +(instancetype) locationWithCLLocation:(CLLocation *) location
                                forNote:(AFMNote *) note;
 @end
